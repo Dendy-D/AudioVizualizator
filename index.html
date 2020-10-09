@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Audiovizualizator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@700;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="menu" class="menu left" >
+
+    <div id="menuButton" class="menuButton">
+      <div id="menuIcon" class="menuIcon"></div>
+    </div>
+
+    <div class="menuContent">
+
+      <div class="colorBcg">
+        <p>Background color (in HEX) :</p>
+        <input type="text" value="#121217" id="colorBcg">
+      </div>
+
+      <div class="colorObject">
+        <p>Color Lines (in HEX) :</p>
+        <input type="text" value="#C800FF" id="colorObject">
+      </div>
+
+      <div class="typeOfVizualizator">
+        <p>Type of vizualizator :</p>
+        <select name="typeOfV" id="typeOfVizualizator">
+          <option value="defolt" selected>Lines in Bottom</option>
+          <option value="circle">Circil in Center</option>
+          <option value="square">Square in Center</option>
+          <option value="LinesInCenter">Lines in Center</option>
+          <option value="InDeveloping" disabled>Will Be Soon...</option>
+        </select>
+      </div>
+
+      <div class="sizeObjects">
+        <p>Size Height of Objects :</p>
+        <input class="range" type="range" min="0.5" max="3" step="0.1" value="1" id="range">
+        <span id="SizeOfHeight" class="SizeOfHeight">1</span>
+      </div>
+
+      <div class="fileSelectionBox">
+        <label for="fileUpload" class="fileSelection" id="fileSelection" onmousedown="return false">Choose a file</label>
+        <input type="file" name="file" id="fileUpload" class="file"/>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <input class="volumeControle" id="volumeControle" type="range" min="0" max="1" step="0.1" value="0.5">
+    <span id="volumeValue">0.5</span>
+  </div>
+
+  <audio src="PUSSYKILLER_-_Ne_otlipal_64688236.mp3" id="audio"></audio>
+
+  <div id="container" class="LinesInBottom">
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+    
+    <div id="boxForSquare" class="boxForSquare hidden">
+      <div id="square" class="square"></div>
+    </div>
+    
+    <div id="boxForCircle" class="boxForCircle hidden">
+      <div id="circle" class="circle"></div>
+    </div>
+    
+   <span class="play">►</span>
+   <span class="pause">=</span>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

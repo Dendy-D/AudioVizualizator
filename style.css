@@ -1,0 +1,385 @@
+body, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+}
+p {
+  font-size: 20px; 
+  margin-bottom: 5px;
+}
+input, select {
+  font-size: 16px;
+  width: 150px;
+  height: 26px;
+  border-radius: 5px;
+  border: 3px solid purple;
+  margin-bottom: 5px;
+  outline: none;
+}
+select {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.range {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    background-color: #121217;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    background-color: #121217;
+}
+.LinesInBottom {
+  align-items: flex-end;
+}
+.LinesInCenter {
+  align-items: center;
+}
+.logo {
+    background-color: #C800FF;
+    width: 30px;
+    margin-right: 5px;  
+}
+.menu {
+  width: 300px;
+  min-height: 400px;
+  background-color: #F0F0F4;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  transition: 0.2s ease-in;
+}
+.menuButton {
+  background-color: #C800FF;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: -50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  left: -300px;
+  transition: 0.2s ease-in;
+}
+.menuIcon {
+  background-color: white;
+  width: 30px;
+  height: 5px;
+  position: absolute;
+}
+.menuIcon::after {
+  background-color: white;
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  display: block;
+  top: -10px;
+  content: '';
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+.menuIcon::before {
+  background-color: white;
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  display: block;
+  top: 10px;
+  content: '';
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+.menuIcon.menuIconActive {
+  background-color: transparent;
+  transition-delay: 0.2s;
+}
+.menuIcon.menuIconActive::after {
+  transform: rotate(-45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+.menuIcon.menuIconActive::before {
+  transform: rotate(45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+.menuContent {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+option {
+  font-size: 15px;
+  cursor: pointer;
+}
+.SizeOfHeight {
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #800080;
+}
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #C800FF;  
+}
+
+.boxForCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxForSquare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square {
+  width: 250px;
+  height: 250px;
+  background-color: #C800FF;  
+}
+
+.hidden {
+  display: none;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+.volumeControle {
+  cursor: pointer;
+}
+.sidebar span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #800087;
+  position: absolute;
+  margin-left: 5px;
+}
+.file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.fileSelection {
+  cursor: pointer;
+  font-size: 20px;
+/*  font-weight: bold;*/
+  background-color: #C800FF;
+  padding: 8px;
+  display: inline-block;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px;
+}
+.fileSelection:hover {
+  background-color: purple;
+  padding: 10px;
+}
+.play {
+    font-size: 6rem;
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    line-height: 2rem;  
+    transform: translate(-50%, 50%);
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    color: #f8f8f2;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.pause {
+    font-size: 10rem;
+    line-height: 2rem;
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(90deg);
+    display: inline-block;
+    transform-origin: center center;
+    font-family: 'Roboto', sans-serif;
+    color: #f8f8f2;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.play.active, .pause.active {
+    animation: appearance 0.75s ease-in-out forwards;
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    } 
+
+    60% {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    100% {
+       opacity: 0;
+       visibility: hidden; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
